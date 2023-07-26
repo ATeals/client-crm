@@ -21,7 +21,7 @@ function App() {
         (async () => {
             const { data } = await axios.get("/data");
             console.log(data);
-            if (data?.loggedIn) return;
+            if (data.loggedIn) return;
             navigation("/login");
         })();
     }, []);

@@ -5,7 +5,8 @@ import { UserApi } from "../../api";
 export default () => {
     const navigate = useNavigate();
     const func = async () => {
-        console.log(await UserApi.logout());
+        const data = await UserApi.logout();
+        console.log(data);
     };
 
     useEffect(() => {
